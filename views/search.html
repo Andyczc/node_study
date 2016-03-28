@@ -1,0 +1,28 @@
+<% include header.html %>
+<div class="container-fluid">
+    <div class="row-fluid">
+        <div class="span8">
+            <form method="post">
+                <div style="padding: 20px;">
+                    <input type="text" name="name" value="<%= movie %>">&nbsp;&nbsp;&nbsp;&nbsp;
+                    <button type="submit">搜索</button>
+                </div>
+            <form>
+        </div>
+        
+        <div style="padding: 20px;">
+            <% list.forEach(function(item){ %>  
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h3 class="panel-title"><%= item.name %></h3>
+                    </div>
+                    <div class="panel-body">
+                        <%= item.publish %>
+                    </div>
+                </div>
+            <% }) %>     
+        </div>
+        
+    </div>
+</div>
+<% include footer.html %>l
